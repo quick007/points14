@@ -5,3 +5,38 @@
 :root {
   @apply bg-gray-900;
 }
+
+input[type="range"] {
+  
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  @apply rounded-full bg-gray-400 h-2.5;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  @apply rounded-full bg-gray-400 h-2.5;
+}
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  @apply bg-gray-800 rounded-full -mt-2.5 ml-2 h-7 w-4;
+  appearance: none;  
+}
+
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+  @apply bg-teal-400 h-7 w-4 rounded-full;
+  border: none; /*Removes extra border that FF applies*/
+  width: 1rem;
+}
