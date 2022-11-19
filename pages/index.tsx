@@ -9,6 +9,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     if (typeof localStorage.getItem("points") == "string") {
+      //@ts-ignore-error
       setPts(JSON.parse(localStorage.getItem("points")).points);
     }
   }, []);
