@@ -22,29 +22,29 @@ const Home: NextPage = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="rounded-lg bg-gray-200 dark:bg-gray-400/5 dark:border dark:border-gray-200/20 dark:text-gray-100 p-7 sm:p-10 my-10 mx-3 shadow-xl shadow-black/30 text-gray-800 font-medium flex flex-col ">
           <div className="max-w-md mx-auto sm:!mb-12 w-full">
-          <h1 className="text-2xl font-bold text-center">Increment</h1>
-          <div className="mt-4 mb-4 grid grid-cols-4 place-items-center">
-            <IncButton add={5} />
-            <IncButton add={10} />
-            <IncButton add={25} />
-            <IncButton add={50} />
-          </div>
-          <div className="flex mb-4 mt-8 mx-4">
-            <input
-              type="range"
-              min="5"
-              max="100"
-              step="5"
-              onChange={(e) => setInc(parseInt(e.target.value))}
-              className="w-full"
-              value={inc}
-            />
-          </div>
-          <div className="flex px-8 items-center mb-4 max-w-sm mx-auto">
-            <div className="flex-grow h-0.5 bg-gradient-to-r from-transparent to-gray-900 dark:to-gray-200 rounded-full opacity-75 mr-2" />
-            {inc}
-            <div className="flex-grow h-0.5 bg-gradient-to-l from-transparent to-gray-900 dark:to-gray-200 rounded-full opacity-75 ml-2" />
-          </div>
+            <h1 className="text-2xl font-bold text-center">Increment</h1>
+            <div className="mt-4 mb-4 grid grid-cols-4 place-items-center">
+              <IncButton add={5} />
+              <IncButton add={10} />
+              <IncButton add={25} />
+              <IncButton add={50} />
+            </div>
+            <div className="flex mb-4 mt-8 mx-4">
+              <input
+                type="range"
+                min="5"
+                max="100"
+                step="5"
+                onChange={(e) => setInc(parseInt(e.target.value))}
+                className="w-full"
+                value={inc}
+              />
+            </div>
+            <div className="flex px-8 items-center mb-4 max-w-sm mx-auto">
+              <div className="flex-grow h-0.5 bg-gradient-to-r from-transparent to-gray-900 dark:to-gray-200 rounded-full opacity-75 mr-2" />
+              {inc}
+              <div className="flex-grow h-0.5 bg-gradient-to-l from-transparent to-gray-900 dark:to-gray-200 rounded-full opacity-75 ml-2" />
+            </div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 place-items-center gap-10">
@@ -57,8 +57,15 @@ const Home: NextPage = () => {
             <Patrol name="Stags" index={6} inc={inc} />
             <Patrol name="Tigers" index={7} inc={inc} />
           </div>
-          <div onClick={() => (localStorage.removeItem("points"), setPts([0,0,0,0,0,0,0,0]))} className="mx-auto mt-8 rounded bg-gray-900 text-gray-200 dark:bg-white dark:text-gray-900 px-4 py-1 cursor-pointer">Reset All</div>
-          
+          <div
+            onClick={() => (
+              localStorage.removeItem("points"),
+              setPts([0, 0, 0, 0, 0, 0, 0, 0])
+            )}
+            className="mx-auto mt-8 rounded bg-gray-900 text-gray-200 dark:bg-white dark:text-gray-900 px-4 py-1 cursor-pointer"
+          >
+            Reset All
+          </div>
         </div>
       </div>
     </>
@@ -69,7 +76,9 @@ const Home: NextPage = () => {
       <button
         className={
           "rounded-full w-8 h-8 grid place-items-center font-medium dark:text-gray-100 bg-gray-200 transition  dark:bg-gray-400/10 dark:border dark:border-gray-200/20 " +
-          (inc == add ? "bg-gray-900 text-gray-100 dark:text-gray-900 dark:bg-white" : "")
+          (inc == add
+            ? "bg-gray-900 text-gray-100 dark:text-gray-900 dark:bg-white"
+            : "")
         }
         onClick={() => setInc(add)}
       >
