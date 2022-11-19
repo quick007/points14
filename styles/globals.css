@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-gray-900;
+  @apply bg-gray-900 dark:bg-black;
 }
 
 input[type="range"] {
@@ -19,12 +19,12 @@ input[type="range"] {
 /***** Track Styles *****/
 /***** Chrome, Safari, Opera, and Edge Chromium *****/
 input[type="range"]::-webkit-slider-runnable-track {
-  @apply rounded-full bg-gray-400 h-2.5;
+  @apply rounded-full bg-gray-300 h-2.5;
 }
 
 /******** Firefox ********/
 input[type="range"]::-moz-range-track {
-  @apply rounded-full bg-gray-400 h-2.5;
+  @apply rounded-full bg-gray-300 h-2.5;
 }
 
 /***** Thumb Styles *****/
