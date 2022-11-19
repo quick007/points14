@@ -75,10 +75,10 @@ const Home: NextPage = () => {
     return (
       <button
         className={
-          "rounded-full w-8 h-8 grid place-items-center font-medium dark:text-gray-100 bg-gray-200 transition  dark:bg-gray-400/10 dark:border dark:border-gray-200/20 " +
+          "rounded-full w-8 h-8 grid place-items-center font-medium  bg-gray-200 transition-all   " +
           (inc == add
             ? "bg-gray-900 text-gray-100 dark:text-gray-900 dark:bg-white"
-            : "")
+            : "dark:bg-gray-400/10 dark:border dark:border-gray-200/20 dark:text-gray-100")
         }
         onClick={() => setInc(add)}
       >
